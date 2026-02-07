@@ -108,23 +108,44 @@
 
 </head>
 <body>
-  <div class="background"></div>
-  <div class="overlay"></div>
+  <div class="card">
+    <div class="heart">💖</div>
+    <h1>Helloww Cheeseng 💕</h1>
+    <p>
+      This Valentine’s Day, I was wondering…<br /><br />
+      Would you like to be my Valentine and spend the day with me? 🌹✨
+    </p>
 
-  <div class="container">
-    <div class="card">
-      <div class="heart">💖</div>
-      <h1>Helloww Cheeseng 💕</h1>
-      <p>
-        This Valentine’s Day, I was wondering…<br /><br />
-        Would you like to be my Valentine and spend the day with me? 🌹✨
-      </p>
-
-      <div class="buttons">
-        <button class="yes" onclick="sayYes()">Yes 💘</button>
-        <button class="no" onclick="sayNo()">No 🙈</button>
-      </div>
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes 💘</button>
+      <button class="no" onclick="sayNo()">No 🙈</button>
     </div>
   </div>
 
+  <script>
+    function sayYes() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+          font-family:'Comic Sans MS','Segoe UI',sans-serif;
+          text-align:center;
+        ">
+          <h1 style="color:#ff4d6d;font-size:48px;">YAY!!! 💖🥰</h1>
+          <p style="font-size:24px;color:#555;">
+            I can’t wait to spend Valentine’s Day with you, my main dish heehee 💕
+          </p>
+        </div>
+      `;
+    }
+
+    function sayNo() {
+      alert("Nice joke 😌 I know you want to go muahahhaha 💕");
+    }
+  </script>
+</body>
 </html>
